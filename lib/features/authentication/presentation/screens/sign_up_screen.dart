@@ -17,7 +17,7 @@ class SignUpScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             SignInButtonBuilder(
               text: 'Get going with Email',
               icon: Icons.email,
@@ -29,21 +29,7 @@ class SignUpScreen extends StatelessWidget {
             ),
             const Divider(),
             SignInButton(
-              Buttons.Google,
-              onPressed: () {
-                context.showSnackBar(snackBarErrorText);
-              },
-            ),
-            const Divider(),
-            SignInButton(
               Buttons.GoogleDark,
-              onPressed: () {
-                context.showSnackBar(snackBarErrorText);
-              },
-            ),
-            const Divider(),
-            SignInButton(
-              Buttons.FacebookNew,
               onPressed: () {
                 context.showSnackBar(snackBarErrorText);
               },
@@ -103,15 +89,6 @@ class SignUpScreen extends StatelessWidget {
                   onPressed: () {
                     context.showSnackBar(snackBarErrorText);
                   },
-                ),
-                SignInButtonBuilder(
-                  icon: Icons.email,
-                  text: "Ignored for mini button",
-                  mini: true,
-                  onPressed: () {
-                    context.showSnackBar(snackBarErrorText);
-                  },
-                  backgroundColor: Colors.cyan,
                 ),
               ],
             ),
